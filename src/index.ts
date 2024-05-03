@@ -12,8 +12,8 @@ import { swipers } from '$utils/swipers';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  nestedElement();
+  // nestedElement();
   linkblockedit();
-  modal();
+  // modal();
   swipers();
 });
