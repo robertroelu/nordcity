@@ -66,7 +66,7 @@ export const swipers = () => {
     });
   }
 
-  // headerSwipers();
+  headerSwipers();
 
   function clientsSwiper() {
     //Home header swiper
