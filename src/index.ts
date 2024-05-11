@@ -1,5 +1,8 @@
 //Finsweet attributes
 import { linkblockedit } from '@finsweet/attributes-linkblockedit/';
+import { cmssort } from '@finsweet/attributes-cmssort/';
+import { cmsload } from '@finsweet/attributes-cmsload/';
+import { cmsfilter } from '@finsweet/attributes-cmsfilter/';
 
 //Modal
 import { modal } from '$modal/modal';
@@ -14,6 +17,9 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   // nestedElement();
   linkblockedit();
+  cmssort();
+  cmsload();
+  cmsfilter();
   // modal();
   swipers();
 });
