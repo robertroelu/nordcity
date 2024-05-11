@@ -37,25 +37,28 @@
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
     "@changesets/cli": "^2.27.1",
-    "@finsweet/eslint-config": "^2.0.6",
-    "@finsweet/tsconfig": "^1.3.3",
-    "@playwright/test": "^1.41.2",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
-    "@typescript-eslint/parser": "^6.20.0",
+    "@finsweet/eslint-config": "^2.0.7",
+    "@finsweet/tsconfig": "^1.3.4",
+    "@playwright/test": "^1.44.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.19.12",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "prettier": "^3.2.4",
-    "typescript": "^5.3.3"
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@finsweet/attributes-cmsfilter": "^1.16.2",
+    "@finsweet/attributes-cmsload": "^1.12.0",
+    "@finsweet/attributes-cmssort": "^1.13.3",
     "@finsweet/attributes-linkblockedit": "^1.5.0",
     "@finsweet/ts-utils": "^0.40.0",
     "gsap": "^3.12.5",
-    "swiper": "^11.0.5"
+    "swiper": "^11.1.1"
   },
   "engines": {
     "pnpm": ">=8"
