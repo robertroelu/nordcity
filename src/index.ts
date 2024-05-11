@@ -12,6 +12,7 @@ import { nestedElement } from './nest/nestElement';
 
 //Utils
 import { swipers } from '$utils/swipers';
+import { swipersBuildings } from '$utils/swipersBuildings';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -21,5 +22,6 @@ window.Webflow.push(() => {
   cmsload();
   cmsfilter();
   // modal();
-  swipers();
+  // swipers();
+  swipersBuildings();
 });
