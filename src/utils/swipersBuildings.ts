@@ -48,7 +48,7 @@ export const swipersBuildings = () => {
     });
 
     // Mobile
-    el.addEventListener('touchstart', () => {
+    el.addEventListener('mouseover', () => {
       const elAttr = el.getAttribute('popover-dot');
       const elParents = el.parentNode?.childNodes as NodeListOf<HTMLElement>;
 
@@ -60,7 +60,7 @@ export const swipersBuildings = () => {
       });
     });
 
-    el.addEventListener('touchend', () => {
+    el.addEventListener('mouseout', () => {
       const elAttr = el.getAttribute('popover-dot');
       const elParents = el.parentNode?.childNodes as NodeListOf<HTMLElement>;
 
