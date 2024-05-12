@@ -19,8 +19,10 @@ export const swipersBuildings = () => {
       nextEl: swiperBuildingNext,
       prevEl: swiperBuildingPrev,
     },
+    initialSlide: 1,
   });
 
+  // Dots hover on desktop and mobile
   const elDots = document.querySelectorAll('[popover-dot]') as NodeListOf<HTMLElement>;
   const arrowSwiper = document.querySelectorAll(
     '.home_buildings_main-arrow-wrap'
@@ -54,8 +56,9 @@ export const swipersBuildings = () => {
 
       elParents.forEach((elNode) => {
         if (elNode.getAttribute('popover-mobile') === elAttr) {
-          elNode.style.transform = 'scale(1) translate(-50%, -50%)';
+          elNode.style.transform = 'translate(-50%, -50%) scale(1)';
           elNode.style.opacity = '1';
+          elNode.style.zIndex = '60';
         }
       });
     });
@@ -66,8 +69,9 @@ export const swipersBuildings = () => {
 
       elParents.forEach((elNode) => {
         if (elNode.getAttribute('popover-mobile') === elAttr) {
-          elNode.style.transform = 'scale(0) translate(-50%, -50%)';
+          elNode.style.transform = 'translate(-50%, -50%) scale(0)';
           elNode.style.opacity = '0';
+          elNode.style.zIndex = '0';
         }
       });
     });
