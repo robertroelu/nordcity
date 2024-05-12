@@ -22,6 +22,6 @@ window.Webflow.push(() => {
   cmsload();
   cmsfilter();
   // modal();
-  // swipers();
+  swipers();
   swipersBuildings();
 });

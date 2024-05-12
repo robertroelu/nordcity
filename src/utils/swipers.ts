@@ -36,6 +36,7 @@ export const swipers = () => {
     const elButtons = document.querySelector(
       '[swiper-option-header="home-header-buttons"]'
     ) as HTMLElement;
+    if (!elButtons) return;
     const elPrev = document.querySelector('[swiper-prev="home-header-buttons"]') as HTMLElement;
     const elNext = document.querySelector('[swiper-next="home-header-buttons"]') as HTMLElement;
 
@@ -98,6 +99,7 @@ export const swipers = () => {
     const elButtons = document.querySelector(
       '[swiper-option-clients="home-client-buttons"]'
     ) as HTMLElement;
+    if (!elButtons) return;
     const elPrev = document.querySelector('[swiper-prev="home-client-buttons"]') as HTMLElement;
     const elNext = document.querySelector('[swiper-next="home-client-buttons"]') as HTMLElement;
 
