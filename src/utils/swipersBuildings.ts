@@ -6,11 +6,14 @@ import { Autoplay, EffectFade, Navigation, Controller } from 'swiper/modules';
 export const swipersBuildings = () => {
   const swiperModules = [Autoplay, EffectFade, Navigation, Controller];
 
-  const swiperBuilding = document.querySelector('[swiper-option="home-building"]') as HTMLElement;
+  const elBuilding = document.querySelector(
+    '[swiper-option-hotspot="home-building"]'
+  ) as HTMLElement;
+  if (!elBuilding) return;
   const swiperBuildingPrev = document.querySelector('[swiper-prev="home-building"]') as HTMLElement;
   const swiperBuildingNext = document.querySelector('[swiper-next="home-building"]') as HTMLElement;
 
-  let swiperButtons = new Swiper(swiperBuilding, {
+  let swiperBuilding = new Swiper(elBuilding, {
     modules: swiperModules,
     speed: 500,
     spaceBetween: 80,
@@ -20,6 +23,37 @@ export const swipersBuildings = () => {
       prevEl: swiperBuildingPrev,
     },
     initialSlide: 1,
+  });
+
+  const elGallery = document.querySelector('[swiper-option-hotspot="home-gallery"]') as HTMLElement;
+  if (!elGallery) return;
+
+  let swiperButtons = new Swiper(elGallery, {
+    modules: swiperModules,
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 0,
+    allowTouchMove: false,
+    initialSlide: 1,
+  });
+
+  const elTitle = document.querySelector('[swiper-option-hotspot="home-titles"]') as HTMLElement;
+  if (!elTitle) return;
+
+  let swiperTitles = new Swiper(elTitle, {
+    modules: swiperModules,
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 500,
+    allowTouchMove: false,
+    initialSlide: 1,
+  });
+
+  swiperBuilding.on('slideChange', (el) => {
+    const actualSlide = el.activeIndex;
+    console.log(actualSlide);
+    swiperTitles.slideTo(actualSlide);
+    swiperButtons.slideTo(actualSlide);
   });
 
   // Dots hover on desktop and mobile
