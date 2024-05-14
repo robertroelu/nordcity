@@ -51,7 +51,6 @@ export const swipersBuildings = () => {
 
   swiperBuilding.on('slideChange', (el) => {
     const actualSlide = el.activeIndex;
-    console.log(actualSlide);
     swiperTitles.slideTo(actualSlide);
     swiperButtons.slideTo(actualSlide);
   });
