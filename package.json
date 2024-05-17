@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
-    "@changesets/cli": "^2.27.1",
+    "@changesets/cli": "^2.27.2",
     "@finsweet/eslint-config": "^2.0.7",
     "@finsweet/tsconfig": "^1.3.4",
     "@playwright/test": "^1.44.0",
@@ -58,7 +58,8 @@
     "@finsweet/attributes-linkblockedit": "^1.5.0",
     "@finsweet/ts-utils": "^0.40.0",
     "gsap": "^3.12.5",
-    "swiper": "^11.1.1"
+    "split-type": "^0.3.4",
+    "swiper": "^11.1.3"
   },
   "engines": {
     "pnpm": ">=8"
