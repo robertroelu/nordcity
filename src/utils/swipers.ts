@@ -61,7 +61,7 @@ export const swipers = () => {
       const actualSlide = el.activeIndex;
       counterText.textContent = actualSlide + 1 + '/' + length;
 
-      swiperHeaders.forEach((el) => {
+      swiperHeaders.forEach((el: Swiper) => {
         el.slideTo(actualSlide);
       });
     });
@@ -119,7 +119,7 @@ export const swipers = () => {
     swiperButtons.on('slideChange', (el) => {
       const actualSlide = el.activeIndex;
 
-      swiperHeaders.forEach((el) => {
+      swiperHeaders.forEach((el: Swiper) => {
         el.slideTo(actualSlide);
       });
     });
