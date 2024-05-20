@@ -3,6 +3,8 @@ import 'swiper/css/bundle';
 import Swiper from 'swiper';
 import { Autoplay, EffectFade, Navigation, Controller } from 'swiper/modules';
 
+import { elementAnimation } from './text-animations';
+
 export const swipers = () => {
   const swiperModules = [Autoplay, EffectFade, Navigation, Controller];
 
@@ -123,6 +125,9 @@ export const swipers = () => {
         el.slideTo(actualSlide);
       });
     });
+
+    const elTitle = document.querySelectorAll('[text-slide-up-heading]');
+    console.log(elTitle);
   }
 
   clientsSwiper();
