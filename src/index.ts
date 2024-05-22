@@ -14,6 +14,7 @@ import { nestedElement } from './nest/nestElement';
 import { swipers } from '$utils/swipers';
 import { swipersBuildings } from '$utils/swipersBuildings';
 import { textAnimations } from '$utils/text-animations';
+import { languageSwitcher } from '$utils/language-switcher';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -26,4 +27,5 @@ window.Webflow.push(() => {
   swipers();
   swipersBuildings();
   textAnimations();
+  languageSwitcher();
 });
