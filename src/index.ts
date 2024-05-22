@@ -3,6 +3,7 @@ import { linkblockedit } from '@finsweet/attributes-linkblockedit/';
 import { cmssort } from '@finsweet/attributes-cmssort/';
 import { cmsload } from '@finsweet/attributes-cmsload/';
 import { cmsfilter } from '@finsweet/attributes-cmsfilter/';
+import { scrolldisable } from '@finsweet/attributes-scrolldisable';
 
 //Modal
 import { modal } from '$modal/modal';
@@ -23,6 +24,7 @@ window.Webflow.push(() => {
   cmssort();
   cmsload();
   cmsfilter();
+  scrolldisable();
   // modal();
   swipers();
   swipersBuildings();
