@@ -20,6 +20,9 @@ importers:
       '@finsweet/attributes-linkblockedit':
         specifier: ^1.5.0
         version: 1.5.0
+      '@finsweet/attributes-scrolldisable':
+        specifier: ^1.6.2
+        version: 1.6.2
       '@finsweet/ts-utils':
         specifier: ^0.40.0
         version: 0.40.0
@@ -323,6 +326,9 @@ packages:
   '@finsweet/attributes-linkblockedit@1.5.0':
     resolution: {integrity: sha512-vQePwXdKD9AGYzfHbkkixpgjrsrSww1IRQD6/1QVBvZ8lS08wRz7pu01fppe69Ioka85pcoQF3f9z0LJeOgH4A==}
 
+  '@finsweet/attributes-scrolldisable@1.6.2':
+    resolution: {integrity: sha512-u1ICBmyaV5kQZacTFK/ZIyucm2MpdZLg22djc6jQL4C0neBC1FGgzt8gvPQ5TiXkU2bRFZH3f2ylXMFv8REBrA==}
+
   '@finsweet/eslint-config@2.0.7':
     resolution: {integrity: sha512-7twyMzYbt2RCKqkaApORAI2R8ZK3234t9lXD5uBsaWT9JL0avg6gHULGW8aTqxNrdZ0zlfFpCGcUnCiZUxH32w==}
     peerDependencies:
@@ -522,6 +528,9 @@ packages:
   better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
+
+  body-scroll-lock@4.0.0-beta.0:
+    resolution: {integrity: sha512-a7tP5+0Mw3YlUJcGAKUqIBkYYGlYxk2fnCasq/FUph1hadxlTRjF+gAcZksxANnaMnALjxEddmSi/H3OR8ugcQ==}
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -1982,6 +1991,11 @@ snapshots:
 
   '@finsweet/attributes-linkblockedit@1.5.0': {}
 
+  '@finsweet/attributes-scrolldisable@1.6.2':
+    dependencies:
+      body-scroll-lock: 4.0.0-beta.0
+      just-debounce: 1.1.0
+
   '@finsweet/eslint-config@2.0.7(@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5))(eslint-plugin-simple-import-sort@10.0.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -2210,6 +2224,8 @@ snapshots:
   better-path-resolve@1.0.0:
     dependencies:
       is-windows: 1.0.2
+
+  body-scroll-lock@4.0.0-beta.0: {}
 
   brace-expansion@1.1.11:
     dependencies:

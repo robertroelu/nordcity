@@ -56,6 +56,7 @@
     "@finsweet/attributes-cmsload": "^1.12.0",
     "@finsweet/attributes-cmssort": "^1.13.3",
     "@finsweet/attributes-linkblockedit": "^1.5.0",
+    "@finsweet/attributes-scrolldisable": "^1.6.2",
     "@finsweet/ts-utils": "^0.40.0",
     "gsap": "^3.12.5",
     "split-type": "^0.3.4",
