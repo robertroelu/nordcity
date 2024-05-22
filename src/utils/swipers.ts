@@ -21,13 +21,33 @@ export const swipers = () => {
     swipersEl.forEach((el) => {
       const elAttr = el.getAttribute('swiper-option-header');
 
-      if (elAttr?.includes('home-headers')) {
+      if (elAttr === 'home-headers') {
         settings = {
           modules: swiperModules,
           effect: 'fade',
           speed: 500,
           allowTouchMove: false,
           fadeEffect: { crossFade: true },
+        };
+
+        const newSwiper = new Swiper(el, settings) || null;
+        swiperHeaders.push(newSwiper);
+      } else if (elAttr === 'home-headers-title') {
+        const elTitle = document.querySelectorAll(
+          '[text-slide-up-heading]'
+        ) as NodeListOf<HTMLElement>;
+        const arrayEl: NodeListOf<HTMLElement> = [elTitle[0]];
+        settings = {
+          modules: swiperModules,
+          effect: 'fade',
+          speed: 0,
+          allowTouchMove: false,
+          fadeEffect: { crossFade: true },
+          on: {
+            init: function () {
+              elementAnimation(arrayEl);
+            },
+          },
         };
 
         const newSwiper = new Swiper(el, settings) || null;
@@ -59,14 +79,23 @@ export const swipers = () => {
     const actualSlide = swiperButtons.activeIndex + 1;
     const counterText = document.querySelector('[counter-text]') as HTMLElement;
     counterText.textContent = actualSlide + '/' + length;
+
+    const elTitle = document.querySelectorAll('[text-slide-up-heading]') as NodeListOf<HTMLElement>;
+
     swiperButtons.on('slideChange', (el) => {
       const actualSlide = el.activeIndex;
+      const arrayEl: NodeListOf<HTMLElement> = [elTitle[actualSlide]];
+      elementAnimation(arrayEl);
+
       counterText.textContent = actualSlide + 1 + '/' + length;
 
       swiperHeaders.forEach((el: Swiper) => {
         el.slideTo(actualSlide);
       });
     });
+
+    // const elTitle = document.querySelectorAll('[text-slide-up-heading]');
+    // console.log(elTitle);
   }
 
   headerSwipers();
@@ -125,9 +154,6 @@ export const swipers = () => {
         el.slideTo(actualSlide);
       });
     });
-
-    const elTitle = document.querySelectorAll('[text-slide-up-heading]');
-    console.log(elTitle);
   }
 
   clientsSwiper();
