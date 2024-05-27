@@ -4,6 +4,7 @@ import Swiper from 'swiper';
 import { Autoplay, EffectFade, Navigation, Controller } from 'swiper/modules';
 
 import { elementAnimation } from './text-animations';
+import type { SwiperOptions } from 'swiper/types';
 
 export const swipers = () => {
   const swiperModules = [Autoplay, EffectFade, Navigation, Controller];
@@ -15,8 +16,8 @@ export const swipers = () => {
     ) as NodeListOf<HTMLElement>;
     if (!swipersEl) return;
 
-    let settings = {};
-    let swiperHeaders = [] || null;
+    let settings: SwiperOptions = {};
+    let swiperHeaders: Swiper[] = [];
 
     swipersEl.forEach((el) => {
       const elAttr = el.getAttribute('swiper-option-header');
@@ -36,7 +37,7 @@ export const swipers = () => {
         const elTitle = document.querySelectorAll(
           '[text-slide-up-heading]'
         ) as NodeListOf<HTMLElement>;
-        const arrayEl: NodeListOf<HTMLElement> = [elTitle[0]];
+        const arrayEl: HTMLElement[] = [elTitle[0]];
         settings = {
           modules: swiperModules,
           effect: 'fade',
@@ -84,7 +85,7 @@ export const swipers = () => {
 
     swiperButtons.on('slideChange', (el) => {
       const actualSlide = el.activeIndex;
-      const arrayEl: NodeListOf<HTMLElement> = [elTitle[actualSlide]];
+      const arrayEl: HTMLElement[] = [elTitle[actualSlide]];
       elementAnimation(arrayEl);
 
       counterText.textContent = actualSlide + 1 + '/' + length;
@@ -107,8 +108,8 @@ export const swipers = () => {
     ) as NodeListOf<HTMLElement>;
     if (!swipersEl) return;
 
-    let settings = {};
-    let swiperHeaders = [] || null;
+    let settings: SwiperOptions = {};
+    let swiperHeaders: Swiper[] = [];
 
     swipersEl.forEach((el) => {
       const elAttr = el.getAttribute('swiper-option-clients');

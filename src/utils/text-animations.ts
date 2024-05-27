@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/all';
 import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger);
 
-export function elementAnimation(element: NodeListOf<HTMLElement>) {
+export function elementAnimation(element: HTMLElement[]) {
   // Link timelines to scroll position
   function createScrollTrigger(triggerElement: HTMLElement, timeline: GSAPTimeline) {
     // Play tl when scrolled into view (60% from top of screen)
@@ -39,5 +39,5 @@ export const textAnimations = () => {
   const textSlideUp = document.querySelectorAll('[text-slide-up]') as NodeListOf<HTMLElement>;
   if (!textSlideUp) return;
 
-  elementAnimation(textSlideUp);
+  elementAnimation([...textSlideUp]);
 };
