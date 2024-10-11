@@ -17,6 +17,7 @@ import { swipersBuildings } from '$utils/swipersBuildings';
 import { textAnimations } from '$utils/text-animations';
 import { languageSwitcher } from '$utils/language-switcher';
 import { blog } from '$utils/blog';
+import { hoverAnimation } from '$utils/hoverAnimation';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -32,4 +33,5 @@ window.Webflow.push(() => {
   textAnimations();
   languageSwitcher();
   blog();
+  hoverAnimation();
 });
